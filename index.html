@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lucky Slots Customer Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        .background-image {
+            background-image: url('https://s10.gifyu.com/images/SfQkx.png');
+            background-size: cover; /* Cover the whole screen */
+            background-position: 47% center; /* Center the image */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Place the image behind the content */
+        }
+
+        #supportLink {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Make sure the link is clickable */
+        }
+
+        #supportLink:hover {
+            cursor: pointer;
+        }
+
+        @media (orientation: landscape) {
+            .background-image {
+                background-size: contain; /* Ensure full image is visible in landscape */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <a id="supportLink" href=""></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var whatsappLinks = [
+                
+                  'https://wa.me/447449930338', <!-- jasmine -->
+                  'https://wa.me/358404411203', <!-- Prancy -->
+                 'https://wa.me/553391085250'<!-- Malik -->
+                
+// ... add as many links as you want
+            ];
+
+            var supportLink = document.getElementById('supportLink');
+
+            supportLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                var randomLink = whatsappLinks[Math.floor(Math.random() * whatsappLinks.length)];
+                window.location.href = randomLink;
+            });
+        });
+    </script>
+</body>
+</html>
